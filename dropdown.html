@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Run when page finishes loading
+
+            document.querySelector('select').onchange = function() {
+                document.querySelector('#hello').style.color = this.value; 
+            }
+
+        });
+    </script>
+</head>
+<body>
+    <h1 id="hello">Hello World!</h1>
+    <select>
+        <option value="green">Green</option>
+        <option value="teal">Teal</option>
+        <option value="purple">Purple</option>
+    </select>
+</body>
+</html>

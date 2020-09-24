@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Run when page finishes loading
+
+            // get an array containing all matching elements
+            document.querySelectorAll('button').forEach( (button) => {
+                button.onclick = function() {
+                    document.querySelector('#hello').style.color = button.dataset.color;
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <h1 id="hello">Hello World!</h1>
+    <button data-color="green">Green</button>
+    <button data-color="teal">Teal</button>
+    <button data-color="purple">Purple</button>
+</body>
+</html>

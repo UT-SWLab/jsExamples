@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang='en'>
+<body>
+    <select>
+        <option value="one">One</option>
+        <option value="two">Two</option>
+        <option value="three">three</option>
+    </select>
+
+    <ol id="numlist"></ol>
+    
+    <script>
+        document.querySelector('select').onchange = function() {
+            let ord_list = document.getElementById('numlist');
+
+            let new_elt = document.createElement("LI");
+            let new_text = document.createTextNode(`${this.value}`);
+
+            new_elt.appendChild(new_text);
+            ord_list.appendChild(new_elt);
+        }
+    </script>
+</body>

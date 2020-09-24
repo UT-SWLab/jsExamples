@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript Begins Now</title>
+ 
+        <script>
+
+            document.addEventListener("DOMContentLoaded", my_fun);
+            
+            function my_fun() {
+                let button = document.getElementById("myButton");
+                button.addEventListener("click", () => {
+                   document.querySelector('h1').style.color="cyan"; 
+                   let para = document.querySelector('p');
+                   para.innerHTML = "Have a wonderful day!";
+                   para.style.textAlign = "center";
+                }); 
+            }
+        </script>
+    </head>    
+    <body>
+
+        <h1 style="color:red;">Hello!</h1>
+
+        <p></p>
+
+        <button id="myButton">Click This One</button>
+    </body>
+</html>

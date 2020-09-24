@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelector('form').onsubmit = () => {
+
+                    let task_list = document.getElementById('tasks'); // ordered list of tasks
+
+                    const task = document.querySelector('#task').value;
+                    let list_elt = document.createElement('li'); // create new li element
+                    list_elt.innerHTML = task;
+                    
+                    task_list.appendChild(list_elt);
+
+                    // stop form from submitting
+                    return false;
+                }
+            });
+        </script>
+ 
+    </head>
+<body>
+    
+    <h2>My tasks</h2>
+    <ol id="tasks"></ol>
+    <br>
+
+    <form>
+        <input  id='task' type="text" autocomplete="off" placeholder="Enter task here">
+        <input type="submit" value="submit">
+    </form>
+
+    
+    
+  
+</body>

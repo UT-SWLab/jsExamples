@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bird Stuff</title>
+        <style>
+            [data-bird-type="grackle"] {
+                color: dodgerblue;
+            }
+            p[data-bird-type="grackle"] {
+                background-color: beige;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <p data-bird-type="grackle">Grackles are the smartest birds.</p>
+        <ol>
+            <li data-bird-type="owl">Owl</li>
+            <li data-bird-type='sparrow'>Sparrow</li>
+            <li data-bird-type='grackle'>Grackle Rules</li>
+        </ol>
+
+        <script>
+            const some_bird = document.querySelector("li");
+            alert(`${some_bird.dataset.birdType}`);
+        </script>
+    </body>
+</html>
